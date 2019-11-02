@@ -7,8 +7,8 @@ namespace Crypto
     {
         static void Main(string[] args)
         {
-            var totp = new Authenticator.Totp();
-            Console.WriteLine(totp.GetOtp());
+            var totp = new Authenticator.Totp("JBSWY3DPEHPK3PXP");
+            Console.WriteLine($"Secret key : {totp.GetSharedSecret()}\nOTP : {totp.GetOtp()}");
         }
     }
 }

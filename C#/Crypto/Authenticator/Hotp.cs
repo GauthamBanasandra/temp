@@ -15,9 +15,14 @@ namespace Authenticator
             }
         }
 
-        public byte[] GetSharedSecret()
+        public Hotp(string sharedSecret)
         {
-            return sharedSecret;
+            this.sharedSecret = Base32.ToByteArray(sharedSecret);
+        }
+
+        public string GetSharedSecret()
+        {
+            return Base32.ToBase32String(sharedSecret);
         }
 
         public int GetOtp(ulong count, int digits = 6)
