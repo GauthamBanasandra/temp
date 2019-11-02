@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/C#/Crypto/.vs/Crypto/v16
+/C#/Crypto/Authenticator/bin/Debug/netstandard2.0
+/C#/Crypto/Authenticator/obj
+/C#/Crypto/Crypto/bin/Debug/netcoreapp3.0
+/C#/Crypto/Crypto/obj

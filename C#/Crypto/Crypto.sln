@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto", "Crypto\Crypto.csproj", "{54041E19-DCE9-423A-A37B-CB90FB714DB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticator", "Authenticator\Authenticator.csproj", "{346D1B39-0125-4F25-8730-05179A234E59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54041E19-DCE9-423A-A37B-CB90FB714DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54041E19-DCE9-423A-A37B-CB90FB714DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54041E19-DCE9-423A-A37B-CB90FB714DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54041E19-DCE9-423A-A37B-CB90FB714DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{346D1B39-0125-4F25-8730-05179A234E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{346D1B39-0125-4F25-8730-05179A234E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{346D1B39-0125-4F25-8730-05179A234E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{346D1B39-0125-4F25-8730-05179A234E59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36607952-93B1-46A6-BD7D-DAFCE70CAFD8}
+	EndGlobalSection
+EndGlobal
