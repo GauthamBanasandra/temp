@@ -7,3 +7,5 @@
 /C#/Crypto/Authenticator/obj
 /C#/Crypto/Crypto/bin/Debug/netcoreapp3.0
 /C#/Crypto/Crypto/obj
+/C#/Crypto/.vs/Crypto/DesignTimeBuild
+/js/crypto/node_modules/jssha
