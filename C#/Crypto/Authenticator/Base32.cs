@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Authenticator
 {
-    static class Base32
+    public static class Base32
     {
         /// <summary>
         /// The different characters allowed in Base32 encoding.
