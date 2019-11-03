@@ -10,7 +10,7 @@ namespace Authenticator
 
         public int GetOtp()
         {
-            var epoch_time = (DateTime.Now - DateTime.MinValue).TotalSeconds;
+            var epoch_time = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds;
             return GetOtp((ulong)Math.Floor(epoch_time / 30));
         }
     }

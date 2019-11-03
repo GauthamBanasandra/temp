@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace Authenticator
 {
@@ -17,7 +18,7 @@ namespace Authenticator
 
         public Hotp(string sharedSecret)
         {
-            this.sharedSecret = Base32.ToByteArray(sharedSecret);
+            this.sharedSecret = Encoding.ASCII.GetBytes(sharedSecret);
         }
 
         public string GetSharedSecret()
