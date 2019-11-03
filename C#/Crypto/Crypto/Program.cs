@@ -30,7 +30,15 @@ namespace Crypto
             var secret = StringToByteArray("48656c6c6f21deadbeef");
             var time = StringToByteArray("00000000031ff27b");
             var hash = new HMACSHA1(secret).ComputeHash(time);
-            Console.WriteLine(ByteArrayToString(hash));
+            Console.WriteLine($"HMAC SHA1 : {ByteArrayToString(hash)}");
+
+            var offset = hash.Last() & 0x0F;
+            var otp = (
+                ((hash[offset + 0] & 0x7f) << 24) |
+                ((hash[offset + 1] & 0xff) << 16) |
+                ((hash[offset + 2] & 0xff) << 8) |
+                (hash[offset + 3] & 0xff)) % 1000000;
+            Console.WriteLine($"OTP : {otp}");
         }
     }
 }
