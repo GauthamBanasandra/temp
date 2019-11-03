@@ -1,12 +1,21 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
 
 namespace Authenticator
 {
     public class Hotp
     {
+        private readonly byte[] sharedSecret;
+        public string SharedSecret
+        {
+            get
+            {
+                return Base32.ToBase32String(sharedSecret);
+            }
+        }
+
         public Hotp()
         {
             using (var generator = new RNGCryptoServiceProvider())
@@ -22,38 +31,30 @@ namespace Authenticator
             this.sharedSecret = Base32.ToByteArray(sharedSecret);
         }
 
-        public string SharedSecret
-        {
-            get
-            {
-                return Base32.ToBase32String(sharedSecret);
-            }
-        }
-
         public int GetOtp(long count, int digits = 6)
         {
             using (var hmac = HMAC.Create("HMACSHA1"))
             {
                 hmac.Key = sharedSecret;
-                hmac.ComputeHash(StringToByteArray(count.ToString("X16")));
+                hmac.ComputeHash(StringToByteArray(count.ToString("X16", CultureInfo.InvariantCulture)));
                 return Truncate(hmac.Hash, digits);
             }
         }
 
-        private static int Truncate(byte[] hmac_result, int digits)
+        private static int Truncate(byte[] hmacResult, int digits)
         {
-            var truncated = DynamicTruncation(hmac_result);
+            var truncated = DynamicTruncation(hmacResult);
             return truncated % (int)Math.Pow(10, digits);
         }
 
-        private static int DynamicTruncation(byte[] hmac_result)
+        private static int DynamicTruncation(byte[] hmacResult)
         {
-            int offset = hmac_result.Last() & 0x0f;
-            int bin_code = (hmac_result[offset] & 0x7f) << 24
-               | (hmac_result[offset + 1] & 0xff) << 16
-               | (hmac_result[offset + 2] & 0xff) << 8
-               | (hmac_result[offset + 3] & 0xff);
-            return bin_code;
+            int offset = hmacResult.Last() & 0x0f;
+            int code = (hmacResult[offset] & 0x7f) << 24
+               | (hmacResult[offset + 1] & 0xff) << 16
+               | (hmacResult[offset + 2] & 0xff) << 8
+               | (hmacResult[offset + 3] & 0xff);
+            return code;
         }
 
         private static byte[] StringToByteArray(string hex)
@@ -63,7 +64,5 @@ namespace Authenticator
                 bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
             return bytes;
         }
-
-        private readonly byte[] sharedSecret;
     }
 }
