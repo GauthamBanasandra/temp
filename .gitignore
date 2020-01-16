@@ -10,3 +10,7 @@
 /C#/Crypto/.vs/Crypto/DesignTimeBuild
 /js/crypto/node_modules/jssha
 /C++/.build
+/go/loadlib/.idea
+/go/loadlib/math/.vs/math/v16
+/go/loadlib/math/math/Debug
+/go/loadlib/math/math/x64/Debug
