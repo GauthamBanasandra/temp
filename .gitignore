@@ -14,3 +14,7 @@
 /go/loadlib/math/.vs/math/v16
 /go/loadlib/math/math/Debug
 /go/loadlib/math/math/x64/Debug
+/go/cgo/.idea
+/go/loadlib/math/x64/Debug
+/go/cgo/math.dll
+/go/cgo/main.exe
