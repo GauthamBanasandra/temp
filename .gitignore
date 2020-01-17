@@ -18,3 +18,6 @@
 /go/loadlib/math/x64/Debug
 /go/cgo/math.dll
 /go/cgo/main.exe
+/go/.idea
+/go/cgo/queue/lib/.vs
+/go/cgo/queue/lib/out/build/x64-Debug
