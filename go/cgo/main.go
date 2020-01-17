@@ -1,7 +1,7 @@
 package main
 
 /*
-#cgo LDFLAGS: -L C:/Users/Gautham/projects/github/temp/go/loadlib/math/x64/Debug -lmath
+#cgo LDFLAGS: -L C:/Users/Gautham/projects/github/temp/go/cgo/lib/build/Debug -ladd
 int Add(int a, int b);
 */
 import "C"
