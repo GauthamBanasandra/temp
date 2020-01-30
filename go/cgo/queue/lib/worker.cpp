@@ -84,5 +84,5 @@ void Worker::Process() {
     return;
   }
   v8::String::Utf8Value result_utf8(isolate_, result);
-  std::cout << *result_utf8 << std::endl;
+  std::cout << "From v8 : " << *result_utf8 << std::endl;
 }
