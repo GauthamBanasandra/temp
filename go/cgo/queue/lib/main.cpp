@@ -4,6 +4,7 @@
 #include <thread>
 
 int main(int argc, char *argv[]) {
+  Configure();
   Start();
   Process(2);
 

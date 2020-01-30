@@ -1,6 +1,7 @@
 #ifndef WORKER_H
 #define WORKER_H
 
+#include <memory>
 #include <string>
 #include <v8.h>
 
@@ -11,6 +12,7 @@ public:
   Worker();
   ~Worker();
 
+  void Configure();
   void Process(const int value) { messages_.Push(value); }
   void Start();
 
@@ -23,6 +25,7 @@ private:
   v8::Persistent<v8::Context> context_;
   v8::Persistent<v8::Script> script_;
   v8::Isolate::CreateParams isolate_params_;
+  std::unique_ptr<v8::Platform> platform_;
 };
 
 #endif
