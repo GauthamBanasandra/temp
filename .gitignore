@@ -21,3 +21,7 @@
 /go/.idea
 /go/cgo/queue/lib/.vs
 /go/cgo/queue/lib/out/build/x64-Debug
+/C#/Language/.vs/Language/v16
+/C#/Language/CustomComparerHashSet/bin/x64/Debug/netcoreapp3.1
+/C#/Language/CustomComparerHashSet/obj
+/JSP/MyWebsite/out
