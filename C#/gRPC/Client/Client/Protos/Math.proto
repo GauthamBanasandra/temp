@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MathClient";
+
+package myMath;
+
+service Calculator {
+	rpc Add (Operands) returns (Number);
+}
+
+message Number {
+	int64 number = 1;
+}
+
+message Operands {
+	int64 operand1 = 1;
+	int64 operand2 = 2;
+}

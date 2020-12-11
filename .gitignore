@@ -25,3 +25,8 @@
 /C#/Language/CustomComparerHashSet/bin/x64/Debug/netcoreapp3.1
 /C#/Language/CustomComparerHashSet/obj
 /JSP/MyWebsite/out
+/C#/gRPC/Client/.vs/Client
+/C#/gRPC/Client/Client/bin/Debug/netcoreapp3.1
+/C#/gRPC/Client/Client/obj/Debug/netcoreapp3.1/Protos/Math.cs
+/C#/gRPC/Client/Client/obj
+/Java/out/production/Java
