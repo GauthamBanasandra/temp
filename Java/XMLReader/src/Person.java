@@ -24,7 +24,7 @@ public class Person {
                     break;
 
                 case XMLTags.dateOfBirth:
-                    person.setDateOfBirth(DateOfBirth.createFromXmlEvent(reader));
+                    person.setDateOfBirth(DateOfBirth.createFromXmlReader(reader));
                     break;
 
                 case XMLTags.placeOfBirth:
@@ -38,6 +38,7 @@ public class Person {
                 default:
                     throw new XMLStreamException(String.format("Unknown element: %s", elementName));
             }
+            reader.nextEvent();
         }
         assert reader.nextEvent().isEndElement();
         return person;

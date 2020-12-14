@@ -35,6 +35,7 @@ public class TimeOfBirth {
                 default:
                     throw new XMLStreamException(String.format("Unknown element: %s", elementName));
             }
+            reader.nextEvent();
         }
         assert reader.nextEvent().isEndElement();
         return timeOfBirth;
@@ -42,7 +43,8 @@ public class TimeOfBirth {
 
     public static class XMLTags {
         public static final String hour = "hour";
-        public static final String minute = "minute";
+        // TODO : Change this to "minute"
+        public static final String minute = "minutes";
         public static final String second = "second";
         public static final String timezone = "timezone";
     }

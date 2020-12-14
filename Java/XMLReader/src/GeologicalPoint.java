@@ -46,6 +46,7 @@ public class GeologicalPoint {
                 default:
                     throw new XMLStreamException(String.format("Unknown element: %s", elementName));
             }
+            reader.nextEvent();
         }
         assert reader.nextEvent().isEndElement();
         return geologicalPoint;

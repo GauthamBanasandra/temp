@@ -7,5 +7,6 @@ public class XMLReader {
         FileInputStream inputStream = new FileInputStream("C:\\Users\\Gautham\\projects\\github\\temp\\Java\\XMLReader\\resources\\input.xml");
         RequestParser requestParser = new RequestParser();
         MatchData matchData = requestParser.parse(inputStream);
+        System.out.println(matchData.getBoy().getName());
     }
 }

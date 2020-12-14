@@ -6,7 +6,7 @@ public class DateOfBirth {
     private int month;
     private int year;
 
-    public static DateOfBirth createFromXmlEvent(XMLEventReader reader) throws XMLStreamException {
+    public static DateOfBirth createFromXmlReader(XMLEventReader reader) throws XMLStreamException {
         DateOfBirth dateOfBirth = new DateOfBirth();
         while (!reader.peek().isEndElement()) {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
@@ -29,6 +29,7 @@ public class DateOfBirth {
                 default:
                     throw new XMLStreamException(String.format("Unknown element: %s", elementName));
             }
+            reader.nextEvent();
         }
         assert reader.nextEvent().isEndElement();
         return dateOfBirth;
