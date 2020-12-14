@@ -13,22 +13,22 @@ public class TimeOfBirth {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
             switch (elementName) {
                 case XMLTags.minute:
-                    timeOfBirth.setMinute(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    timeOfBirth.minute = Integer.parseInt(reader.nextEvent().asCharacters().getData());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.hour:
-                    timeOfBirth.setHour(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    timeOfBirth.hour = Integer.parseInt(reader.nextEvent().asCharacters().getData());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.second:
-                    timeOfBirth.setSecond(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    timeOfBirth.second = Integer.parseInt(reader.nextEvent().asCharacters().getData());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.timezone:
-                    timeOfBirth.setTimezone(reader.nextEvent().asCharacters().getData());
+                    timeOfBirth.timezone = reader.nextEvent().asCharacters().getData();
                     assert reader.nextEvent().isEndElement();
                     break;
 
@@ -53,31 +53,15 @@ public class TimeOfBirth {
         return hour;
     }
 
-    public void setHour(int hour) {
-        this.hour = hour;
-    }
-
     public int getMinute() {
         return minute;
-    }
-
-    public void setMinute(int minute) {
-        this.minute = minute;
     }
 
     public int getSecond() {
         return second;
     }
 
-    public void setSecond(int second) {
-        this.second = second;
-    }
-
     public String getTimezone() {
         return timezone;
-    }
-
-    public void setTimezone(String timezone) {
-        this.timezone = timezone;
     }
 }

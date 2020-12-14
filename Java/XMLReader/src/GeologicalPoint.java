@@ -18,25 +18,25 @@ public class GeologicalPoint {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
             switch (elementName) {
                 case XMLTags.degrees:
-                    geologicalPoint.setDegrees(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    geologicalPoint.degrees = Integer.parseInt(reader.nextEvent().asCharacters().getData().strip());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.minutes:
-                    geologicalPoint.setMinutes(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    geologicalPoint.minutes = Integer.parseInt(reader.nextEvent().asCharacters().getData().strip());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.direction:
-                    String direction = reader.nextEvent().asCharacters().getData();
+                    String direction = reader.nextEvent().asCharacters().getData().strip();
                     if (direction.equalsIgnoreCase("NORTH")) {
-                        geologicalPoint.setDirection(Place.Direction.NORTH);
+                        geologicalPoint.direction = Place.Direction.NORTH;
                     } else if (direction.equalsIgnoreCase("SOUTH")) {
-                        geologicalPoint.setDirection(Place.Direction.SOUTH);
+                        geologicalPoint.direction = Place.Direction.SOUTH;
                     } else if (direction.equalsIgnoreCase("EAST")) {
-                        geologicalPoint.setDirection(Place.Direction.EAST);
+                        geologicalPoint.direction = Place.Direction.EAST;
                     } else if (direction.equalsIgnoreCase("WEST")) {
-                        geologicalPoint.setDirection(Place.Direction.WEST);
+                        geologicalPoint.direction = Place.Direction.WEST;
                     } else {
                         throw new XMLStreamException(String.format("Unknown direction: %s", direction));
                     }
@@ -62,23 +62,11 @@ public class GeologicalPoint {
         return degrees;
     }
 
-    public void setDegrees(int degrees) {
-        this.degrees = degrees;
-    }
-
     public int getMinutes() {
         return minutes;
     }
 
-    public void setMinutes(int minutes) {
-        this.minutes = minutes;
-    }
-
     public Place.Direction getDirection() {
         return direction;
-    }
-
-    public void setDirection(Place.Direction direction) {
-        this.direction = direction;
     }
 }

@@ -11,11 +11,11 @@ public class PlaceOfBirth {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
             switch (elementName) {
                 case XMLTags.latitude:
-                    placeOfBirth.setLatitude(GeologicalPoint.createFromXmlReader(reader));
+                    placeOfBirth.latitude = GeologicalPoint.createFromXmlReader(reader);
                     break;
 
                 case XMLTags.longitude:
-                    placeOfBirth.setLongitude(GeologicalPoint.createFromXmlReader(reader));
+                    placeOfBirth.longitude = GeologicalPoint.createFromXmlReader(reader);
                     break;
 
                 default:
@@ -36,15 +36,7 @@ public class PlaceOfBirth {
         return latitude;
     }
 
-    public void setLatitude(GeologicalPoint latitude) {
-        this.latitude = latitude;
-    }
-
     public GeologicalPoint getLongitude() {
         return longitude;
-    }
-
-    public void setLongitude(GeologicalPoint longitude) {
-        this.longitude = longitude;
     }
 }

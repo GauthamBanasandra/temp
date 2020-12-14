@@ -12,17 +12,17 @@ public class DateOfBirth {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
             switch (elementName) {
                 case XMLTags.day:
-                    dateOfBirth.setDay(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    dateOfBirth.day = Integer.parseInt(reader.nextEvent().asCharacters().getData().strip());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.month:
-                    dateOfBirth.setMonth(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    dateOfBirth.month = Integer.parseInt(reader.nextEvent().asCharacters().getData().strip());
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.year:
-                    dateOfBirth.setYear(Integer.parseInt(reader.nextEvent().asCharacters().getData()));
+                    dateOfBirth.year = Integer.parseInt(reader.nextEvent().asCharacters().getData().strip());
                     assert reader.nextEvent().isEndElement();
                     break;
 
@@ -45,24 +45,11 @@ public class DateOfBirth {
         return day;
     }
 
-    public void setDay(int day) {
-        this.day = day;
-    }
-
     public int getMonth() {
         return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
     }
 
     public int getYear() {
         return year;
     }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
 }

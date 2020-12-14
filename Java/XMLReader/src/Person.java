@@ -14,25 +14,25 @@ public class Person {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
             switch (elementName) {
                 case XMLTags.id:
-                    person.setId(reader.nextEvent().asCharacters().getData());
+                    person.id = reader.nextEvent().asCharacters().getData().strip();
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.name:
-                    person.setName(reader.nextEvent().asCharacters().getData());
+                    person.name = reader.nextEvent().asCharacters().getData().strip();
                     assert reader.nextEvent().isEndElement();
                     break;
 
                 case XMLTags.dateOfBirth:
-                    person.setDateOfBirth(DateOfBirth.createFromXmlReader(reader));
+                    person.dateOfBirth = DateOfBirth.createFromXmlReader(reader);
                     break;
 
                 case XMLTags.placeOfBirth:
-                    person.setPlaceOfBirth(PlaceOfBirth.createFromXmlReader(reader));
+                    person.placeOfBirth = PlaceOfBirth.createFromXmlReader(reader);
                     break;
 
                 case XMLTags.timeOfBirth:
-                    person.setTimeOfBirth(TimeOfBirth.createFromXmlReader(reader));
+                    person.timeOfBirth = TimeOfBirth.createFromXmlReader(reader);
                     break;
 
                 default:
@@ -56,39 +56,19 @@ public class Person {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public DateOfBirth getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(DateOfBirth dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
-
     public PlaceOfBirth getPlaceOfBirth() {
         return placeOfBirth;
     }
 
-    public void setPlaceOfBirth(PlaceOfBirth placeOfBirth) {
-        this.placeOfBirth = placeOfBirth;
-    }
-
     public TimeOfBirth getTimeOfBirth() {
         return timeOfBirth;
-    }
-
-    public void setTimeOfBirth(TimeOfBirth timeOfBirth) {
-        this.timeOfBirth = timeOfBirth;
     }
 }

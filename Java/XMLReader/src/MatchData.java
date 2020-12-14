@@ -13,11 +13,11 @@ public class MatchData {
             String elementName = reader.nextEvent().asStartElement().getName().getLocalPart();
             switch (elementName) {
                 case XMLTags.boy:
-                    matchData.setBoy(Person.createFromXmlReader(reader));
+                    matchData.boy = Person.createFromXmlReader(reader);
                     break;
 
                 case XMLTags.girl:
-                    matchData.setGirl(Person.createFromXmlReader(reader));
+                    matchData.girl = Person.createFromXmlReader(reader);
                     break;
 
                 default:
@@ -42,15 +42,7 @@ public class MatchData {
         return boy;
     }
 
-    public void setBoy(Person boy) {
-        this.boy = boy;
-    }
-
     public Person getGirl() {
         return girl;
-    }
-
-    public void setGirl(Person girl) {
-        this.girl = girl;
     }
 }
