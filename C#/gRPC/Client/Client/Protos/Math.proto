@@ -1,6 +1,7 @@
 ﻿syntax = "proto3";
 
 option csharp_namespace = "MathClient";
+option java_package = "org.example.myMath";
 
 package myMath;
 
