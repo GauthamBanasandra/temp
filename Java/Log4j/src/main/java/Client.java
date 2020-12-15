@@ -5,5 +5,7 @@ public class Client {
 
     public static void main(String[] args) {
         logger.info("Hello log");
+
+        System.out.printf("WriteCount=%d\n", BufferedConsoleOutputStream.WriteCount.intValue());
     }
 }
