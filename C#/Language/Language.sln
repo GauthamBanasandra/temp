@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomComparerHashSet", "CustomComparerHashSet\CustomComparerHashSet.csproj", "{66C2E2F0-C348-4833-A5A6-EE46B6EB757E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomComparerHashSet", "CustomComparerHashSet\CustomComparerHashSet.csproj", "{66C2E2F0-C348-4833-A5A6-EE46B6EB757E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLCreator", "XMLCreater\XMLCreator.csproj", "{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{66C2E2F0-C348-4833-A5A6-EE46B6EB757E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{66C2E2F0-C348-4833-A5A6-EE46B6EB757E}.Release|x64.ActiveCfg = Release|x64
 		{66C2E2F0-C348-4833-A5A6-EE46B6EB757E}.Release|x64.Build.0 = Release|x64
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Debug|x64.Build.0 = Debug|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|x64.ActiveCfg = Release|Any CPU
+		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
