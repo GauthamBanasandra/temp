@@ -30,3 +30,8 @@
 /C#/gRPC/Client/Client/obj/Debug/netcoreapp3.1/Protos/Math.cs
 /C#/gRPC/Client/Client/obj
 /Java/out/production/Java
+/C#/Language/XMLCreater/bin/Debug/netcoreapp3.1
+/C#/Language/XMLCreater/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+/C#/Language/XMLCreater/obj
+/C++/.vs
+/C++/out/build/x64-Debug
