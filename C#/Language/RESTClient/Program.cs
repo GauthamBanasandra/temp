@@ -31,7 +31,8 @@ namespace RESTClient
 
             var xmlRequestBody = XmlCreator.Create(boy, girl);
             var matchResponse = MatchMakerClient.GetMatch(xmlRequestBody);
-            Console.WriteLine(matchResponse);
+            var compatibilityReportPath = XmlParser.ExtractCompatibilityReportPath(matchResponse);
+            Console.WriteLine(compatibilityReportPath);
         }
     }
 }
