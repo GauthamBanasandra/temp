@@ -1,4 +1,3 @@
-#include <algorithm>
 #include <filesystem>
 #include <iostream>
 #include <ostream>
@@ -13,10 +12,11 @@ std::string GetBasename(const std::string &file_path) {
 
   const std::filesystem::path path(file_path);
   std::vector<std::string> parts;
-  std::transform(path.begin(), path.end(), std::back_inserter(parts),
-                 [](const std::filesystem::path &part) -> std::string {
-                   return part.string();
-                 });
+  for (const auto &part : std::filesystem::path(file_path)) {
+    parts.emplace_back(part.string());
+  }
+
+  /*Handle the case of trailing slash*/
   if (parts.back().empty()) {
     parts.pop_back();
   }
