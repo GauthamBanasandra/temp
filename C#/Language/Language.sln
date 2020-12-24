@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomComparerHashSet", "CustomComparerHashSet\CustomComparerHashSet.csproj", "{66C2E2F0-C348-4833-A5A6-EE46B6EB757E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLCreator", "XMLCreater\XMLCreator.csproj", "{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLCreator", "XMLCreater\XMLCreator.csproj", "{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTClient", "RESTClient\RESTClient.csproj", "{F1D143F6-DA58-420F-A18C-D69E6810DB46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|x64.ActiveCfg = Release|Any CPU
 		{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}.Release|x64.Build.0 = Release|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Debug|x64.Build.0 = Debug|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|x64.ActiveCfg = Release|Any CPU
+		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
