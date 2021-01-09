@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomComparerHashSet", "Cu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLCreator", "XMLCreater\XMLCreator.csproj", "{6E2CDCC9-17D6-43E8-9212-6F48024D1B8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTClient", "RESTClient\RESTClient.csproj", "{F1D143F6-DA58-420F-A18C-D69E6810DB46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RESTClient", "RESTClient\RESTClient.csproj", "{F1D143F6-DA58-420F-A18C-D69E6810DB46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoTrie", "GeoTrie\GeoTrie.csproj", "{D06FB404-D477-4424-9D98-0150EAA80719}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|x64.ActiveCfg = Release|Any CPU
 		{F1D143F6-DA58-420F-A18C-D69E6810DB46}.Release|x64.Build.0 = Release|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Debug|x64.Build.0 = Debug|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Release|x64.ActiveCfg = Release|Any CPU
+		{D06FB404-D477-4424-9D98-0150EAA80719}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
