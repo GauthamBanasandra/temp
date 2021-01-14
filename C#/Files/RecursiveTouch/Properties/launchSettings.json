@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RecursiveTouch": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\Users\\Gautham\\projects\\apache\\wsl\\hadoop"
+    }
+  }
+}
