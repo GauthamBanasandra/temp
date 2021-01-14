@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 
-namespace Files
+namespace PrependNewLine
 {
     class Program
     {
