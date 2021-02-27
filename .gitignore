@@ -58,3 +58,6 @@
 /Java/Language/out/production/Java
 /Java/XMLReader/out/production/XMLReader
 /C++/build
+/C++/Testing/Temporary
+/Java/gRPC/Server/target
+/Java/Log4j/target
