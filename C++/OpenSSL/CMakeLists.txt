@@ -15,3 +15,7 @@ target_link_libraries(check_evp PRIVATE ${OPENSSL_LIBRARIES})
 add_executable(random_bytes RandomBytes.cpp)
 target_include_directories(random_bytes PRIVATE ${OPENSSL_INCLUDE_DIR})
 target_link_libraries(random_bytes PRIVATE ${OPENSSL_LIBRARIES})
+
+add_executable(random_client_id RandomClientID.cpp)
+target_include_directories(random_client_id PRIVATE ${OPENSSL_INCLUDE_DIR})
+target_link_libraries(random_client_id PRIVATE ${OPENSSL_LIBRARIES})
