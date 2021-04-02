@@ -17,4 +17,6 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
 	target_link_libraries(read_certificate crypt32.lib)
 else()
 	add_subdirectory(OpenSSL)
+
+	add_executable(snprintf "stdio/snprintf.c")
 endif()
