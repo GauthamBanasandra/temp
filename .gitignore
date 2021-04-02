@@ -62,3 +62,5 @@
 /Java/gRPC/Server/target
 /Java/Log4j/target
 /C++/out/build/WSL-GCC-Debug
+/Resharper errors/for-loop/.vs
+/Resharper errors/for-loop/out/build
