@@ -15,8 +15,12 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
 	
 	add_executable(read_certificate "Windows/ReadCertificate.cpp")
 	target_link_libraries(read_certificate crypt32.lib)
+
+	add_executable(overflow_plus_one "Limits/overflow.cc")
 else()
 	add_subdirectory(OpenSSL)
 
 	add_executable(snprintf "stdio/snprintf.c")
+
+	add_executable(overflow_plus_one "Limits/overflow.cc")
 endif()
