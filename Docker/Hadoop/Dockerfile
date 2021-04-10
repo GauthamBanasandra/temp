@@ -51,12 +51,6 @@ RUN mkdir $HADOOP_HOME/logs \
 
 RUN cp $HADOOP_HOME/etc/hadoop/mapred-site.xml.template  $HADOOP_HOME/etc/hadoop/mapred-site.xml
 
-# COPY $HADOOP_HOME/etc/hadoop/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml.orig
-# COPY $HADOOP_HOME/etc/hadoop/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml.orig
-# COPY $HADOOP_HOME/etc/hadoop/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml.orig
-# COPY $HADOOP_HOME/etc/hadoop/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml.orig
-# COPY $HADOOP_HOME/etc/hadoop/yarn-env.sh $HADOOP_HOME/etc/hadoop/yarn-env.sh.orig
-
 COPY files/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml
 COPY files/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 COPY files/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml
@@ -67,26 +61,3 @@ RUN chown -R yarn:hadoop $HADOOP_HOME
 
 COPY scripts/start-hdfs.sh $HOME
 RUN chmod a+x $HOME/start-hdfs.sh
-CMD [ "/bin/bash", "/root/start-hdfs.sh" ]
-
-# USER hdfs
-# RUN cd $HADOOP_HOME/bin \
-#     && ./hdfs namenode -format
-# RUN cd $HADOOP_HOME/sbin \
-#     && ./hadoop-daemon.sh start namenode \
-#     && ./hadoop-daemon.sh start secondarynamenode \
-#     && ./hadoop-daemon.sh start datanode
-
-# RUN cd $HADOOP_HOME/bin \
-#     && ./hdfs dfs -mkdir -p /tmp \
-#     && ./hdfs dfs -mkdir -p /mr-history/tmp \
-#     && ./hdfs dfs -mkdir -p /mr-history/done \
-#     && ./hdfs dfs -chown -R yarn:hadoop  /mr-history \
-#     && ./hdfs dfs -chmod go+rwx /mr-history/tmp \
-#     && ./hdfs dfs -chmod go+rwx /tmp
-
-# USER yarn
-# RUN cd $HADOOP_HOME/sbin \
-#     && ./yarn-daemon.sh start resourcemanager \
-#     && ./yarn-daemon.sh start nodemanager \
-#     && ./mr-jobhistory-daemon.sh start historyserver
