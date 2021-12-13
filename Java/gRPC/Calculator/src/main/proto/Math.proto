@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package calculator;
+
+option java_package = "org.gautham.grpc.calculator";
+
+service Calculator {
+  rpc Add (Operands) returns (Result);
+}
+
+message Operands {
+  int64 operand1 = 1;
+  int64 operand2 = 2;
+}
+
+message Result {
+  int64 value = 1;
+}
