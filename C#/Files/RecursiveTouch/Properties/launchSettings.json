@@ -2,7 +2,7 @@
   "profiles": {
     "RecursiveTouch": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\Gautham\\projects\\apache\\wsl\\hadoop"
+      "commandLineArgs": "D:\\projects\\apache\\hadoop\\hadoop-hdfs-project\\hadoop-hdfs-native-client\\src\\main\\native\\libhdfspp"
     }
   }
 }
