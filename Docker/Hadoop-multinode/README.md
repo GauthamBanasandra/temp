@@ -1,0 +1,1 @@
+Need to change "localhost" to "hadoop-master" in core-site.xml and yarn-site-.xml
