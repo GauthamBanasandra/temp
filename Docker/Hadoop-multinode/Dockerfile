@@ -9,7 +9,7 @@ RUN echo APT::Install-Suggests "0"\; >>  /etc/apt/apt.conf.d/10disableextras
 
 RUN apt-get -q update -y \
     && apt-get -q upgrade -y
-RUN apt-get -q install -y --no-install-recommends openjdk-8-jdk
+RUN apt-get -q install -y --no-install-recommends openjdk-11-jdk
 RUN apt-get -q install -y --no-install-recommends vim
 RUN apt-get -q install -y --no-install-recommends ssh
 RUN apt-get -q install -y --no-install-recommends pdsh
@@ -32,7 +32,7 @@ ENV PDSH_RCMD_TYPE ssh
 ENV HADOOP_CONF_DIR /opt/hadoop-config
 ENV HADOOP_HOME /opt/hadoop
 ENV SPARK_HOME /opt/spark
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH ${PATH}:${HADOOP_HOME}/bin:${SPARK_HOME}/bin
 
 USER hduser
@@ -42,7 +42,7 @@ RUN echo 'export PDSH_RCMD_TYPE=ssh' >> ~/.bashrc
 RUN echo 'export HADOOP_CONF_DIR=/opt/hadoop-config' >> ~/.bashrc
 RUN echo 'export HADOOP_HOME=/opt/hadoop' >> ~/.bashrc
 RUN echo 'export SPARK_HOME=/opt/spark' >> ~/.bashrc
-RUN echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64' >> ~/.bashrc
+RUN echo 'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64' >> ~/.bashrc
 RUN echo 'export PATH=${PATH}:${HADOOP_HOME}/bin:${SPARK_HOME}/bin' >> ~/.bashrc
 
 USER root
